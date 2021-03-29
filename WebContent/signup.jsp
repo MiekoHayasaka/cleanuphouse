@@ -11,7 +11,7 @@
 <body>
   <div class="container">
       <div role="main">
-      <h2>「キレイなお家」へようこそ！</h2>
+      <h2>「キレイなお家」へようこそ!!</h2>
       <table class="form-table">
       <tr>
       <th>ユーザー名</th>
