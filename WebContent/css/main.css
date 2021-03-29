@@ -1,0 +1,282 @@
+html {
+  font-size: calc(100% + 0.4vw);
+}
+#right{
+	text-align: right;
+}
+#left{
+	text-align: left;
+}
+#center{
+  margin:0 auto;
+  text-align: center;
+}
+#red{
+	background:#ff8080;
+	color:white;
+}
+#yellow{
+	background:#ffff80
+}
+#green{
+	background: #f0fff0;
+}
+#pink{
+	background: #ffe3e3;
+}
+#blue{
+	background: #d5ffff;
+}
+header{
+  height:25vh;
+  padding:10px 0;
+  background-image:url(../images/item.jpg);
+  background-size:cover;
+}
+header h1{
+  padding:25px;
+  font-size: 3rem;
+  text-align: left;
+  line-height: 15vh;
+  color:#228b22;
+}
+nav{
+	padding:5px;
+	background:#228b22;
+	display: flex;
+}
+nav a{
+  display: block;
+  padding:5px 20px;
+  border-radius: 10px;
+  color:white;
+  text-decoration: none;
+}
+nav ul{
+  padding:5px;
+  background:#228b22;
+  /*親要素にdisplay:flex*/
+  display: flex;
+  /*並べる方向*/
+  flex-direction: column;
+}
+
+nav ul li a{
+  display: block;
+  padding:8px;
+  border-radius: 5px;
+ /* background:#8fbc8f;*/
+  color:white;
+  text-decoration: none;
+ /* border:1px solid #333;*/
+}
+
+/*属性セレクタ*/
+div[role=main]{
+ /* background:#f0fff0;*/
+  padding:3vh 3vw 8vh;
+  line-height: 1.8;
+}
+h1{
+  font-size: 2rem;
+  margin:0 auto;
+  text-align: center;
+}
+h2{
+  width:95%;
+  padding-left:20px;
+  border-left:5px solid #3cb371;
+  font-size:1.5rem;
+  /*border-bottom:2px solid #3cb371;*/
+}
+/*隣接セレクタ(h2のあるp)*/
+h2 + p{
+  width:95%;
+  margin:0 auto 20px;
+  text-align: center;
+}
+/*
+h3{
+  text-align: center;
+  font-size:1rem;
+}
+*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin:0 auto;
+}
+
+h3 a{
+  /*background:#3cb371;*/
+  color:white;
+}
+/*入力フォームのデザイン*/
+
+.form-table th,
+.form-table td {
+  border-top: 1px solid #aaeaad;
+  /*border-bottom: 1px solid #aaeaad;*/
+  padding: 0.6em;
+}
+
+.form-table th {
+  background: #f0fff0;
+  position: relative;
+  text-align: right;
+  width: 30%;
+}
+.form-table tr:last-chile{
+	background: #ffffff;
+	border-bottom: none;
+}
+
+/*一覧表示のデザイン*/
+
+.list-table *{
+  text-align: center;
+}
+.list-table th{
+  background:#3cb371;
+  color:white;
+  padding: 0.6em;
+  position: relative;
+}
+.list-table th a{
+  background:#3cb371;
+  color:white;
+}
+.list-table td {
+  border-top: 1px solid #aaeaad;
+  border-bottom: 1px solid #aaeaad;
+  padding: 0.6em;
+}
+/*
+.list-table tr:nth-child(even){
+.list-table tbody tr:nth-child(odd){
+  background-color: #f0fff0;
+}
+*/
+
+#wrapper{
+	padding:2vh 2vw;
+}
+
+#infoBox{
+   display: flex;
+   flex-direction: column;
+}
+
+#infoBox .info{
+  position:relative;
+  border-radius:5px;
+  border:1px solid #3cb371;
+  margin:20px 10px;
+  background:#f0fff0;
+}
+
+#infoBox .info h3{
+  padding:5px 20px;
+  background:#3cb371;
+  color:white;
+  border-radius:3px;
+  margin-top:0px;
+}
+
+#infoBox .info p,form{
+  padding:10px 20px 20px;
+}
+
+#infoBox .info p a,
+.blogItem > a
+{
+  position:absolute;
+  display: block;
+  padding:10px;
+  border-radius: 5px;
+
+  background:#3cb371;
+  text-decoration: none;
+  color:white;
+  bottom:15px;
+  right:20px;
+}
+
+#blogBox{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+
+.blogItem{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border:1px solid #333;
+  border-radius:5px;
+  padding:16px 20px 80px;
+  margin:10px;
+  background:white;
+
+}
+.blogItem > div{
+  text-align: center;
+  margin-bottom:10px;
+}
+
+.blogItem img{
+  display: block;
+  width:200px;
+}
+
+footer{
+  text-align: center;
+  padding:5px 0;
+  background:#228b22;
+  color:white;
+}
+/*メディアクエリ*/
+@media screen and (min-width: 600px) {
+  nav ul{
+    padding-left:4vw;
+    /*並べる方向*/
+    flex-direction: row;
+  }
+  nav ul li a{
+    margin-right:10px;
+  }
+
+@media screen and (min-width: 768px) {
+  .blogItem{
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .blogItem img{
+    margin-right:20px;
+  }
+}
+@media screen and (min-width: 960px) {
+  #blogBox{
+    flex-direction: row;
+    /*要素が端までいったら折り返す*/
+    flex-wrap:wrap;
+  }
+  .blogItem{
+    /*flexitemの幅指定*/
+    flex-basis:43%;
+    flex-direction:column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #infoBox{
+     flex-direction: row;
+  }
+  .blogItem{
+    flex-direction:row;
+    align-items: flex-start;
+  }
+}
+
